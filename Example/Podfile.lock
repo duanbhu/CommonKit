@@ -1,0 +1,23 @@
+PODS:
+  - CommonKit (0.1.0):
+    - JKSwiftExtension (~> 2.6.0)
+  - JKSwiftExtension (2.6.2)
+
+DEPENDENCIES:
+  - CommonKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - JKSwiftExtension
+
+EXTERNAL SOURCES:
+  CommonKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CommonKit: 1545556c48b3bf94d7a6a943eabd5f6337b1a852
+  JKSwiftExtension: 55c8e3287b6b161f94c3793880b4abcaec2010eb
+
+PODFILE CHECKSUM: 26f467ec185adccd0f00ca0bbb614955f6b702f4
+
+COCOAPODS: 1.15.2

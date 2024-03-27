@@ -1,0 +1,27 @@
+{
+  "name": "CommonKit",
+  "version": "0.1.0",
+  "summary": "A short description of CommonKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dbh/CommonKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dbh": "310701836@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/dbh/CommonKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "source_files": "CommonKit/Classes/**/*",
+  "dependencies": {
+    "JKSwiftExtension": [
+      "~> 2.6.0"
+    ]
+  }
+}
