@@ -115,17 +115,17 @@ public extension UIView {
     func shadow() -> Self {
         return corner(4)
             .shadowColor(.black)
-            .shadowOpacity(0.1)
+            .shadowOpacity(0.05)
             .shadowRadius(2)
-            .shadowOffset(w: 0, h: 2)
+            .shadowOffset(w: 0, h: 1)
             .masksToBounds(false)
     }
 }
 
 // 分割线
-extension UIView {
+public extension UIView {
     @discardableResult
-    func addSeparatorLine(color: UIColor = .line, thickness: CGFloat = 1, left: CGFloat = 0, right: CGFloat = 0) -> Self {
+    func addSeparatorLine(color: UIColor = .color("#F0F0F0", alpha: 0.8), thickness: CGFloat = 1, left: CGFloat = 0, right: CGFloat = 0) -> Self {
         guard viewWithTag(4263782) == nil else { return self }
         
         let separatorLine = UIView()

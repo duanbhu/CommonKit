@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JKSwiftExtension
 
 // MARK: - 常用距离
 
@@ -24,33 +25,50 @@ func kFitSize(w: CGFloat, h: CGFloat) -> CGSize {
     return CGSize(width: kFitScale(at: w), height: kFitScale(at: h))
 }
 
-public let isIphoneX = { () -> Bool in
-    var isX = false
-    if #available(iOS 11.0, *) {
-        isX = (UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0) > CGFloat(0.0)
+var kKeyWindow: UIWindow? {
+    if #available(iOS 13, *) {
+        return UIApplication.shared.windows.filter { $0.isKeyWindow }.first
+    } else {
+        return UIApplication.shared.keyWindow
     }
-    return isX
 }
 
-public let kWindowSafeAreaInset = { () -> UIEdgeInsets in
-    var insets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+public var isIphoneX: Bool {
     if #available(iOS 11.0, *) {
-        insets = UIApplication.shared.keyWindow?.safeAreaInsets ?? insets
+        if let window = kKeyWindow {
+            return window.safeAreaInsets.bottom > 0
+        } else {
+            return false
+        }
+    } else {
+        return UIApplication.shared.statusBarFrame.height > 20
     }
-    return insets
 }
 
-public let kSafeAreaTop = kWindowSafeAreaInset().top == 0 ? 20 : kWindowSafeAreaInset().top
-
-public let kSafeAreaInsetBottom = kWindowSafeAreaInset().bottom
-
-public let kStatusBarHeight = kWindowSafeAreaInset().top
+public var kStatusBarHeight: CGFloat {
+    if #available(iOS 13.0, *) {
+        let window: UIWindow? = UIApplication.shared.windows.first
+        let statusBarHeight = (window?.windowScene?.statusBarManager?.statusBarFrame.height) ?? 0
+        return statusBarHeight
+    } else {
+        // 防止界面没有出来获取为0的情况
+        return UIApplication.shared.statusBarFrame.height > 0 ? UIApplication.shared.statusBarFrame.height : 44
+    }
+}
 
 public let kNavHeight = 44.0
 
-public let kSafeAreaTopHeight = kNavHeight + kStatusBarHeight
+public var kSafeAreaTopHeight: CGFloat {
+    return kNavHeight + kStatusBarHeight
+}
 
-public let kTabBarHeight = 49.0
+public var kSafeAreaInsetBottom: CGFloat {
+    return isIphoneX ? 34 : 0
+}
 
-public let kSafeAreaBottomHeight = kTabBarHeight + kSafeAreaInsetBottom
+public let kTabBarHeight: CGFloat = 49.0
+
+public var kSafeAreaBottomHeight: CGFloat {
+    return kTabBarHeight + kSafeAreaInsetBottom
+}
 

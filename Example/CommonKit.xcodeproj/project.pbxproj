@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BD5CA8D1B7843730222ABA9 /* Pods_CommonKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8C06B085BFC255FF265D9D /* Pods_CommonKit_Tests.framework */; };
+		5F7F76DE2BBA62F60002F91F /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7F76DD2BBA62F60002F91F /* PopupDialog.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		1FABFD220FCFBABFF5E15266 /* Pods-CommonKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-CommonKit_Tests/Pods-CommonKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2A8C06B085BFC255FF265D9D /* Pods_CommonKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CB2C8F2C385628628B9A1C /* Pods-CommonKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonKit_Example.release.xcconfig"; path = "Target Support Files/Pods-CommonKit_Example/Pods-CommonKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5F7F76DD2BBA62F60002F91F /* PopupDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDialog.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CommonKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				5F7F76DD2BBA62F60002F91F /* PopupDialog.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				5F7F76DE2BBA62F60002F91F /* PopupDialog.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
