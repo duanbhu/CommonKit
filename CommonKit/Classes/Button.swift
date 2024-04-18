@@ -24,6 +24,8 @@ open class Button: UIButton {
     
     var isNeedAdjust = false
     
+    var offset: CGPoint = .zero
+    
     @discardableResult
     public func imagePosition(_ postion: ImagePosition, width: CGFloat? = 0, spacing: CGFloat, resize: CGSize = .zero) -> Self {
         adjustSpacing = spacing
@@ -63,6 +65,16 @@ open class Button: UIButton {
 
         switch adjustPosition {
         case .left:
+            var minx = offset.x
+            switch contentHorizontalAlignment {
+            case .left, .leading:
+                minx = offset.x
+            case .center:
+                minx = (bounds.size.width - contentWidth) / 2
+            default:
+                break
+            }
+            
             imageViewRect.origin.x = (bounds.size.width - contentWidth) / 2
             imageViewRect.origin.y = (bounds.size.height - imageSize.height) / 2
             
