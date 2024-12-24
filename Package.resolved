@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/JoanKing/JKSwiftExtension.git",
       "state" : {
-        "revision" : "93222eb5cdf05c7133bc91b6c78abea1fb838ab5",
-        "version" : "2.6.3"
+        "revision" : "198f579b07f42d653747086bdd8d0007cac35e86",
+        "version" : "2.7.3"
       }
     }
   ],
