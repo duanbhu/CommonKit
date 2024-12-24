@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "CommonKit", targets: ["CommonKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/JoanKing/JKSwiftExtension.git", .upToNextMajor(from: "2.6.0")),
+        .package(url: "https://github.com/JoanKing/JKSwiftExtension.git", .upToNextMajor(from: "2.7.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
